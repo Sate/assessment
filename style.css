@@ -1,0 +1,91 @@
+body{
+  background-image: url(creampaper.png);
+}
+
+
+
+.done{
+  text-decoration: line-through;
+}
+.hide{
+  display: none!important;
+}
+@font-face{
+  font-family: brush;
+  src: url('brush.ttf');
+}
+
+.todo{
+  padding: 5px;
+  box-shadow: 12px 6px 8px #CCC;
+  border:1px solid #CCC;
+  margin-top: 11px;
+  -webkit-transition: linear 0.6s;
+
+}
+
+.label{
+  float: right;
+  margin-right: 5px;
+}
+
+.filters{
+  font-family: brush;
+  font-size: 30px;
+  padding:15px;
+  -webkit-transition:linear 0.4s;
+}
+
+.filters span{
+  -webkit-transition:linear 0.4s;
+  opacity: 0.9;
+}
+
+.allF, .actiF, .doneF{
+  cursor: pointer;
+}
+
+.allF.clicked{
+  text-shadow:0px 0px 20px rgba(10, 10, 182, 0.8);
+}
+
+.doneF.clicked{
+  text-shadow:0px 0px 20px rgba(10, 182, 10, 0.8);
+}
+
+.actiF.clicked{
+  text-shadow:0px 0px 20px rgba(182, 10, 10, 0.8);
+}
+
+.todo span{
+  padding-left: 10px;
+  -webkit-transition: linear 0.4s;
+}
+
+#input{
+  width:355px;
+  padding:8px;
+  font-size: 20px;
+  box-shadow: 0px 0px 2px #ccc;
+  border-radius: 0px;
+}
+
+#input:focus{
+  border-color: rgba(182, 18, 18, 0.8);
+  box-shadow: 0px 0px 23px rgba(182, 18, 18, 0.4)!important;
+}
+
+#input:hover{
+  box-shadow: 0px 0px 10px rgba(182, 18, 18, 0.4);
+}
+ul{
+  margin:0px;
+}
+h1{
+  font-family: brush!important;
+  text-decoration: none;
+  font-weight: normal;
+  margin-top: 40px;
+  font-size: 6em;
+  opacity: 0.85;
+}

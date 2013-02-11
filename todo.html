@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title> To Do </title>
+  <link rel="stylesheet" href="anim.css"/>
+  <link rel="stylesheet" href="bootstrap.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="underscore.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="backbone/backbone.js"></script>
+  <script type="text/javascript" src="toDoModel.js"></script>
+  <script type="text/javascript" src="ToDoCollection.js"></script>
+  <script type="text/javascript" src="ToDoView.js"></script>
+  <script type="text/javascript" src="toDoListView.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+  toDos = new ToDoCollection();
+  todolistView = new ToDoListView({ collection:toDos });
+  toDos.add([{text:'Do Catalyst'}]);
+  toDos.add([{text:'Graduate'}]);
+  toDos.add([{text:'???'}]);
+  toDos.add([{text:'Profit'}]);
+
+  $('.filters span').on('click', function(e){
+    $('.clicked').removeClass('clicked');
+    $(this).toggleClass('clicked');
+  })
+
+  });
+</script>
+</head>
+<body>
+
+<div class="container main">
+  <div class="row">
+    <div class="span6 offset3">
+      <h1></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span6 offset3">
+      <br/>
+      <input type="text" id="input" placeholder="Something need doing?"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span6 offset4 filters">
+      <span class="allF clicked" id="showAll">All</span>
+      <span class="doneF" id="showDone">Done</span>
+      <span class="actiF" id="showActive">Active</span>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="span5 offset3">
+      <ul>
+      </ul>
+    </div>
+  </div>
+      
+</body>
+</html>
